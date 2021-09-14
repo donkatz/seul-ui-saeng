@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>슬기로운 의사생활 +</title>
+    <title>슬기로운 의사생활 ++</title>
 
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./js/common.js"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -139,22 +141,126 @@
             </div>
 
             <div class="video">
-                <div class="container"></div>
-            </div>
+                <div class="container">
 
-            <div class="content">
-                <div class="container"></div>
-            </div>
+                    <div class="video-left">
+                        <h2>예고편</h2>
+                        <div class="video-wrap main-video">
+                            <div class="video-box">
+                                <video muted="muted" autoplay="autoplay" loop="loop" controls>
+                                    <source src="./img/content.mp4" type="video.mp4">
+                                </video>
+                            </div>
+                            <div class="v-tit">[최종화 예고] 9월 16일 밤 9시</div>
+                        </div>
+                    </div>
 
-            <div class="projet">
-                <div class="container"></div>
+                    <div class="video-right">
+                        <h2>최신 동영상</h2>
+                        <div class="box-wrap">
+                            <div class="video-wrap sub-video">
+                                <div class="video-box">
+                                    <img src="./img/v01.jfif" alt="최종화 예고01">
+                                    <span>01:00</span>
+                                </div>
+                                <div class="v-tit">[최종화 예고] 언제나처럼 그렇게, 99즈의 평범하면서도 특별한 매일</div>
+                            </div>
+                            <div class="video-wrap sub-video">
+                                <div class="video-box">
+                                    <img src="./img/v02.jfif" alt="최종화 예고02">
+                                    <span>00:15</span>
+                                </div>
+                                <div class="v-tit">
+                                    [최종화 예고] 헤어지기 싫고, 남들 하는 것 해보고 싶은, 그것은 사랑♥
+                                </div>
+                            </div>
+                            <div class="video-wrap sub-video">
+                                <div class="video-box">
+                                    <img src="./img/v03.jfif" alt="11화 예고01">
+                                    <span>01:08</span>
+                                </div>
+                                <div class="v-tit">[11화 예고] 갑작스러운 사고 소식에 놀란 99즈!?</div>
+                            </div>
+                            <div class="video-wrap sub-video">
+                                <div class="video-box">
+                                    <img src="./img/v04.jfif" alt="11화 예고02">
+                                    <span>00:15</span>
+                                </div>
+                                <div class="v-tit">[11화 예고] 김대명X안은진, 마침내.. 데이트 성사?!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
+    </div>
 
-        <footer>
-            <div class="container"></div>
-        </footer>
+    <div class="content">
+        <div class="container">
+
+            <div class="con-left">
+                <div class="con-tit">
+                    <h1>최신 콘텐츠</h1>
+                </div>
+                <div class="hash-tag">
+                    <li class="on">#전체</li>
+                    <li>#현장 포토</li>
+                    <li>#대표 이미지</li>
+                    <li>#OST</li>
+                </div>
+            </div>
+
+            <div class="con-right">
+                <div class="swiper mySwiper">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="./img/s01.jfif" alt="">
+                            <a href="#">11화 밴드 비하인드컷💙</a>
+
+                            <p>현장 포토</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/s02.jfif" alt="">
+                            <a href="#">특별했던 특별출연</a>
+
+                            <p>현장 포토</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/s03.jfif" alt="">
+                            <a href="#">예측불가 러브라인</a>
+
+                            <p>현장 포토</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/s04.jfif" alt="">
+                            <a href="#">오늘 밤도 99즈와 함께</a>
+
+                            <p>현장 포토</p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="projet">
+        <div class="container"></div>
+    </div>
+
+    </div>
+
+    <footer>
+        <div class="container"></div>
+    </footer>
     </div>
 </body>
 

@@ -45,7 +45,7 @@
 
  header>.container {}
 
- /* 로고 */
+ /* ----------------------------  로고 ----------------------------  */
 
  header>.container>.logo-wrap {
      width: 100%;
@@ -73,7 +73,7 @@
 
  header>.container>.logo-wrap>.logo2>a>img {}
 
- /* 메뉴 */
+ /*  ---------------------------- 메뉴 ----------------------------  */
 
  header>.container>.menu {
      width: 100%;
@@ -116,8 +116,10 @@
  }
 
 
- /* 메인 사진 */
- .contents {}
+ /*  ---------------------------- 메인 사진 ----------------------------  */
+ .contents {
+     width: 100%;
+ }
 
  .contents>.main-bg {
      width: 100%;
@@ -129,7 +131,7 @@
  }
 
 
- /* 메인 글씨 */
+ /* ---------------------------- 메인 글씨  ---------------------------- */
 
  .contents>.main-text {
      background-color: #FAFAFA;
@@ -163,7 +165,7 @@
 
 
 
- /* sns */
+ /*  ---------------------------- sns  ---------------------------- */
 
  .contents>.main-text>.container>.text-right {
      width: 50%;
@@ -191,7 +193,7 @@
      transform: translate(18%, 18%);
  }
 
- /* 등장인물 */
+ /* ---------------------------- 등장인물 ----------------------------  */
 
  .contents>.actor {
      background-color: #F9EADC;
@@ -208,7 +210,7 @@
      background-repeat: no-repeat;
  }
 
- /* 인물 탭 */
+ /* ------------------------ 인물 탭 -------------------------- */
  #tab-wrap {
      width: 100%;
      max-width: 1300px;
@@ -288,9 +290,177 @@
      display: none;
  }
 
+ /* ---------------------------- 비디오 --------------------------  */
+ .contents>.video {
+     width: 100%;
+ }
+
+ .contents>.video>.container {
+     display: flex;
+     flex-direction: row;
+ }
+
+ .contents>.video>.container h2 {
+     font-size: 30px;
+     color: #4e4e4e;
+     margin-left: 20px;
+ }
+
+ .contents>.video>.container>.video-left {
+     width: 50%;
+ }
 
 
- /* 반응형 */
+ .contents>.video>.container>.video-left>.video-wrap {
+     padding-top: 10px;
+ }
+
+ .contents>.video>.container>.video-left>.video-wrap>.v-tit {
+     font-size: 20px;
+     padding: 15px 0 20px 30px;
+     font-weight: bold;
+     color: #4e4e4e;
+ }
+
+ .contents>.video>.container>.video-left>.video-wrap>.video-box {
+     width: 91%;
+     position: relative;
+     margin: 0 auto;
+ }
+
+ .contents>.video>.container>.video-left>.video-wrap>.video-box>video {
+     width: 100%;
+     border-radius: 3px;
+ }
+
+ .contents>.video>.container>.video-left>.video-wrap>.video-box>video>source {}
+
+
+ .contents>.video>.container>.video-right {
+     width: 50%;
+ }
+
+ .contents>.video>.container>.video-right>.box-wrap {
+     padding: 10px;
+     border-left: 2px solid rgba(66, 66, 66, 0.2);
+ }
+
+ .contents>.video>.container>.video-right>.box-wrap>.video-wrap {
+     width: 45%;
+     display: inline-block;
+     margin-left: 3%;
+     padding-bottom: 20px;
+ }
+
+ .contents>.video>.container>.video-right>.box-wrap>.video-wrap>.video-box {
+     position: relative;
+ }
+
+ .contents>.video>.container>.video-right>.box-wrap>.video-wrap>.video-box>img {
+     width: 100%;
+ }
+
+ .contents>.video>.container>.video-right>.box-wrap>.video-wrap>.video-box>span {
+     position: absolute;
+     display: block;
+     padding: 0 4px;
+     color: #ffffff;
+     right: 4px;
+     bottom: 8px;
+     border-radius: 2px;
+     background-color: rgba(0, 0, 0, 0.6);
+     font-size: 12px;
+ }
+
+ .contents>.video>.container>.video-right>.box-wrap>.video-wrap>.v-tit {
+     color: #4e4e4e;
+     font-size: 13px;
+     font-weight: 800;
+ }
+
+ /* ----------------------- 콘텐츠 ------------------------*/
+
+ .content {
+     width: 100%;
+     margin-top: 30px;
+ }
+
+ .content>.container {
+     display: flex;
+     flex-direction: row;
+ }
+
+ .content>.container>.con-left {
+     width: 20%;
+ }
+
+ .content>.container>.con-left>.con-tit {
+     margin-left: 20px;
+     margin-bottom: 50px;
+ }
+
+ .content>.container>.con-left>.con-tit>h1 {
+     color: #4e4e4e;
+     font-size: 30px;
+ }
+
+ .content>.container>.con-left>.hash-tag {}
+
+ .content>.container>.con-left>.hash-tag li {
+     border: 1px solid #c4c4c4;
+     border-radius: 50px;
+     margin-left: 25px;
+     margin-bottom: 5px;
+     padding: 10px 20px;
+     display: inline-block;
+     color: #929292;
+     font-weight: bold;
+ }
+
+ .content>.container>.con-left>.hash-tag li.on {
+     background-color: #b75c46;
+     border: 1px solid #b75c46;
+     color: #ffffff;
+ }
+
+ .content>.container>.con-right {
+     width: 80%;
+ }
+
+ .content>.container>.con-right>.swiper {
+     width: 100%;
+ }
+
+ .content>.container>.con-right>.swiper>.swiper-button-prev {}
+
+ .content>.container>.con-right>.swiper>.swiper-button-next {}
+
+ .content>.container>.con-right>.swiper>.swiper-wrapper {
+    border: 1px solid red;
+    /* padding: 10px 50px; */
+ }
+
+ .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide:first-child {}
+
+ .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide img {
+     width: 100%;
+     object-fit: cover;
+ }
+
+ .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>a {}
+
+ .content>.container>.con-right>.swiper>.swiper-wrapper p {
+     font-weight: bold;
+     color: #b75c46
+ }
+
+
+ /* ------------------------ 반응형 ----------------------- */
 
  @media only screen and (min-width: 375px) and (max-width: 639px) {
 
@@ -356,6 +526,47 @@
          background-size: 212.5px 15px;
      }
 
+     .tab-wrap {
+         width: 100%;
+         padding-bottom: 110px;
+         margin: 0 auto;
+         background-image: none;
+     }
+
+     .tab-wrap>.tab-tit {
+         display: none;
+     }
+
+     .tab-wrap>.tabBtn-box>.tab-btn>a {
+         display: none;
+     }
+
+
+     .contents>.video>.container {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .contents>.video>.container h2 {
+         font-size: 18px;
+     }
+
+     .contents>.video>.container>.video-left {
+         width: 100%;
+     }
+
+     .contents>.video>.container>.video-right {
+         width: 100%;
+     }
+
+     .contents>.video>.container>.video-right>.box-wrap {
+         border-left: none;
+     }
+
+     .contents>.video>.container>.video-right>.box-wrap>.video-wrap>.v-tit {
+         font-size: 11px;
+     }
+
  }
 
  @media only screen and (min-width: 640px) and (max-width: 767px) {
@@ -395,6 +606,66 @@
          width: 26px;
          height: 26px;
          transform: translate(18%, 18%);
+     }
+
+     .contents>.actor>.container>.actor-tit {
+         width: 100%;
+         padding-bottom: 6.25%;
+         background-image: url(../img/doctorlife_title_01.png);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 350px 24.7px;
+     }
+
+     .tab-wrap {
+         width: 100%;
+         padding-bottom: 110px;
+         margin: 0 auto;
+         background-image: url(../img/tabList_bg.png);
+         background-position: top;
+         background-repeat: no-repeat;
+         background-size: 400px 100px;
+     }
+
+
+     .tab-wrap>.tab-tit {
+         color: #662D1A;
+         font-size: 16px;
+         text-align: center;
+         font-weight: bold;
+         padding: 10px;
+         transform: translateY(0%);
+     }
+
+     .tab-wrap>.tabBtn-box {
+         margin: 0 auto;
+         width: 50%;
+         display: flex;
+         transform: translateY(-20%);
+     }
+
+     .tab-wrap>.tabBtn-box>.tab-btn>a {
+         font-size: 15px !important;
+         font-weight: bold;
+         letter-spacing: -1px;
+
+     }
+
+     .contents>.video>.container>.video-left>.video-wrap>.v-tit {
+         font-size: 16px;
+         padding: 5px 0 20px 20px;
+         font-weight: bold;
+         color: #4e4e4e;
+     }
+
+     .tab-wrap>.tabBtn-box>.tab-btn>a {
+         font-size: 18px;
+         font-weight: bold;
+         letter-spacing: -1px;
+     }
+
+     .contents>.video>.container h2 {
+         font-size: 25px;
      }
  }
 
