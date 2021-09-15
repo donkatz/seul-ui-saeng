@@ -176,7 +176,7 @@
      flex-direction: row;
      justify-content: right;
      align-items: center;
-     transform: translateY(100%);
+     margin-top: 50px;
  }
 
  .contents>.main-text>.container>.text-right>.sns-wrap>.sns {
@@ -185,12 +185,16 @@
      border-radius: 50%;
      background-color: #4F4F4F;
      margin-left: 10px;
+     position: relative;
  }
 
  .contents>.main-text>.container>.text-right>.sns-wrap>.sns>a>img {
      width: 33px;
      height: 33px;
-     transform: translate(18%, 18%);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
  }
 
  /* ---------------------------- 등장인물 ----------------------------  */
@@ -211,39 +215,37 @@
  }
 
  /* ------------------------ 인물 탭 -------------------------- */
- #tab-wrap {
-     width: 100%;
-     max-width: 1300px;
-     margin: 0 auto;
- }
-
  .tab-wrap {
      width: 100%;
-     padding-bottom: 110px;
      margin: 0 auto;
+     padding-bottom: 50px;
+     position: relative;
+     border: 1px solid green;
      background-image: url(../img/tabList_bg.png);
      background-position: center;
      background-repeat: no-repeat;
+     background-size: contain;
  }
 
  .tab-wrap>.tab-tit {
+     position: relative;
      color: #662D1A;
      font-size: 20px;
      text-align: center;
      font-weight: bold;
-     padding: 10px;
-     transform: translateY(50%);
+     border: 1px solid red;
  }
 
  .tab-wrap>.tabBtn-box {
+     position: relative;
      margin: 0 auto;
-     width: 50%;
+     width: 40%;
      display: flex;
-     transform: translateY(120%);
  }
 
  .tab-wrap>.tabBtn-box>.tab-btn {
      width: 20%;
+     padding-top: 27px;
  }
 
  .tab-wrap>.tabBtn-box>.tab-btn:last-child {
@@ -255,7 +257,6 @@
  }
 
  .tab-wrap>.tabBtn-box>.tab-btn>a {
-     transform: translateY(90%);
      border-right: 2px solid #c4c4c4;
      color: #666666;
      width: 100%;
@@ -383,6 +384,7 @@
  .content {
      width: 100%;
      margin-top: 30px;
+     position: relative;
  }
 
  .content>.container {
@@ -431,33 +433,164 @@
      width: 100%;
  }
 
- .content>.container>.con-right>.swiper>.swiper-button-prev {}
-
- .content>.container>.con-right>.swiper>.swiper-button-next {}
-
- .content>.container>.con-right>.swiper>.swiper-wrapper {
-    border: 1px solid red;
-    /* padding: 10px 50px; */
- }
 
  .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide {
      display: flex;
      flex-direction: column;
  }
 
- .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide:first-child {}
 
- .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide img {
-     width: 100%;
-     object-fit: cover;
+ .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>.img-box {
+     padding-bottom: 100%;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
  }
 
- .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>a {}
+
+ .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>a {
+     padding-top: 10px;
+     height: 50px;
+ }
 
  .content>.container>.con-right>.swiper>.swiper-wrapper p {
      font-weight: bold;
-     color: #b75c46
+     color: #b75c46;
+     font-size: 14px;
  }
+
+ .content .button-next,
+ .content .button-prev {
+     content: "";
+     position: absolute;
+     width: 30px;
+     height: 30px;
+     top: 50%;
+     z-index: 99;
+     font-size: 40px;
+     color: #4F4F4F;
+     border-right: 4px solid #b75c46;
+     border-top: 4px solid #b75c46;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ .content .button-prev {
+     left: 15px;
+     transform: translateY(-50%) rotate(-135deg);
+ }
+
+ .content .button-next {
+     right: 15px;
+     transform: translateY(-50%) rotate(45deg);
+ }
+
+ /* ---------------------- 기획의도 ---------------------- */
+.projet {
+    width: 100%;
+    margin-top: 50px;
+}
+.projet >.container{
+    border: 1px solid #C4C4C4;
+    border-radius:10px;
+    display: flex;
+    flex-direction: row;
+}
+.projet >.container>.pro-left {
+    width: 25%;
+    margin: auto;
+    padding: 40px;
+}
+
+.projet >.container>.pro-center {
+    width: 37.5%;
+    padding-top: 25px;
+    margin-left: 30px;
+}
+.projet >.container>.pro-center > h2{
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.projet >.container>.pro-center>.text-box {
+    border-right: 3px solid rgba(66, 66, 66, 0.2);
+}
+.projet >.container h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+.projet >.container li {
+    font-size: 14px; 
+}
+.projet >.container>.pro-right {
+    width: 37.5%;
+    padding-top: 110px;
+    padding-left: 30px;
+}
+
+/* ------------------------ 푸터 ------------------------ */
+
+footer {
+    background-color: #FAFAFA;
+    margin-top: 50px;
+}
+
+footer > .container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .container >.footer-top {
+    padding: 26px 0 0 0;
+}
+footer > .container >.footer-top>ul {
+    text-align: center;
+}
+footer > .container >.footer-top>ul li {
+    padding: 0 7px;
+    display: inline;
+    line-height: 20px;
+}
+
+footer > .container >.footer-top>ul li a{
+    font-size: 14px;
+    color: #707070;
+}
+
+footer > .container >.footer-top>ul li:nth-child(4) > a {
+    font-weight: bold;
+    color: #000
+}
+
+footer > .container >.footer-cen {
+    padding: 21px 0 0 0;
+    text-align: center;
+}
+footer > .container >.footer-cen> span {
+    margin: 0 5px;
+    font-size: 12px;
+    color: #808080;
+    line-height: 22px;
+}
+
+footer > .container >.footer-bot {
+    padding: 16px 0 20px 0;
+}
+footer > .container >.footer-bot > a{
+    position: relative;
+    margin: 0 auto;
+    width: 74px;
+    height: 39px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -99999px;
+    background-image: url(../img/bg_footer_tving_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+
 
 
  /* ------------------------ 반응형 ----------------------- */
@@ -499,6 +632,10 @@
          margin-left: 20px;
      }
 
+     .contents>.main-text>.container>.text-right>.sns-wrap {
+         margin-top: 25px;
+     }
+
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns {
          width: 25px;
          height: 25px;
@@ -514,7 +651,6 @@
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns>a>img {
          width: 18px;
          height: 18px;
-         transform: translate(20%, 18%);
      }
 
      .contents>.actor>.container>.actor-tit {
@@ -555,6 +691,10 @@
          width: 100%;
      }
 
+     .contents>.video>.container>.video-left>.video-wrap>.v-tit{
+         font-size: 15px;
+     }
+
      .contents>.video>.container>.video-right {
          width: 100%;
      }
@@ -566,6 +706,133 @@
      .contents>.video>.container>.video-right>.box-wrap>.video-wrap>.v-tit {
          font-size: 11px;
      }
+
+     .content {
+         margin-top: 0px;
+     }
+     .content> .container {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .content> .container> .con-left {
+         width: 100%;
+     }
+
+     .content> .container> .con-left>.con-tit {
+        margin-bottom: 30px;
+     }
+     .content> .container> .con-left>.con-tit >h1{
+         font-size: 18px;
+     }
+     .content> .container> .con-left>.hash-tag > li {
+       display: none;
+     }
+
+     .content> .container> .con-right {
+         width: 100%;
+     }
+
+
+     .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>.img-box {
+        padding-bottom: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+   
+   
+    .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>a {
+        padding-top: 10px;
+        font-size: 12px;
+        height: 30px;
+    }
+   
+    .content>.container>.con-right>.swiper>.swiper-wrapper p {
+        font-weight: bold;
+        color: #b75c46;
+        font-size: 12px;
+    }
+
+    .content .button-next,
+    .content .button-prev {
+        width: 20px;
+        height: 20px;
+    }
+
+    .projet >.container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .projet >.container>.pro-left {
+        width: 100%;
+        padding-bottom: 25%;
+        background-image: url(../img/character_02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 -220px;
+    }
+    .projet >.container>.pro-left >img{
+        display: none;
+    }
+
+    .projet >.container>.pro-center {
+        width: 100%;
+        padding-top: 20px;
+        margin-left: 0;
+        padding-left: 30px;
+    }
+
+    .projet >.container>.pro-center>.text-box {
+        border-right: none;
+    }
+
+    .projet >.container>.pro-center > h2{
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+    
+    .projet >.container>.pro-right {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .projet> .container>.pro-center> h2 {
+        font-size: 16px;
+    }
+
+    .projet> .container h4,
+    .projet> .container li {
+        font-size: 12px;
+    }
+
+    footer > .container >.footer-top {
+        display: none;
+    }
+    
+    footer > .container >.footer-cen {
+        display: none;
+    }
+  
+    
+    footer > .container >.footer-bot {
+        padding: 0px 0px 50px 0;
+    }
+    
+    footer > .container >.footer-bot > a{
+        position: relative;
+        margin: 0 auto;
+        width: 74px;
+        height: 39px;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -99999px;
+        background-image: url(../img/bg_footer_tving_logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+    }
 
  }
 
@@ -590,6 +857,10 @@
          margin-left: 20px;
      }
 
+     .contents>.main-text>.container>.text-right>.sns-wrap {
+         margin-top: 40px;
+     }
+
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns {
          width: 35px;
          height: 35px;
@@ -605,7 +876,6 @@
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns>a>img {
          width: 26px;
          height: 26px;
-         transform: translate(18%, 18%);
      }
 
      .contents>.actor>.container>.actor-tit {
@@ -621,10 +891,6 @@
          width: 100%;
          padding-bottom: 110px;
          margin: 0 auto;
-         background-image: url(../img/tabList_bg.png);
-         background-position: top;
-         background-repeat: no-repeat;
-         background-size: 400px 100px;
      }
 
 
@@ -634,14 +900,12 @@
          text-align: center;
          font-weight: bold;
          padding: 10px;
-         transform: translateY(0%);
      }
 
      .tab-wrap>.tabBtn-box {
          margin: 0 auto;
          width: 50%;
          display: flex;
-         transform: translateY(-20%);
      }
 
      .tab-wrap>.tabBtn-box>.tab-btn>a {
@@ -667,6 +931,113 @@
      .contents>.video>.container h2 {
          font-size: 25px;
      }
+
+     .content> .container> .con-left>.con-tit {
+        margin-left: 10px;
+        margin-bottom: 30px;
+     }
+     .content> .container> .con-left>.con-tit >h1{
+         font-size: 20px;
+     }
+     .content> .container> .con-left>.hash-tag > li {
+        border: 1px solid #c4c4c4;
+        border-radius: 50px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        padding: 8px 13px;
+        display: inline-block;
+        color: #929292;
+        font-weight: bold;
+        font-size:13px ;
+     }
+
+     .content> .container> .con-right>.swiper>.swiper-wrapper>.swiper-slide>a{
+         font-size: 13px;
+     }
+
+     .content> .container> .con-right>.swiper>.swiper-wrapper>.swiper-slide>p {
+         font-size: 13px;
+     }
+
+     .content .button-next,
+    .content .button-prev {
+        width: 25px;
+        height: 25px;
+    }
+
+    .projet >.container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .projet >.container>.pro-left {
+        width: 100%;
+        padding-bottom: 25%;
+        background-image: url(../img/character_02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 -310px;
+    }
+    .projet >.container>.pro-left >img{
+        display: none;
+    }
+
+    .projet >.container>.pro-center {
+        width: 100%;
+        padding-top: 20px;
+        margin-left: 0;
+        padding-left: 30px;
+    }
+
+    .projet >.container>.pro-center>.text-box {
+        border-right: none;
+    }
+
+    .projet >.container>.pro-center > h2{
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+    
+    .projet >.container>.pro-right {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .projet> .container>.pro-center> h2 {
+        font-size: 16px;
+    }
+
+    .projet> .container h4,
+    .projet> .container li {
+        font-size: 12px;
+    }
+
+    footer > .container >.footer-top {
+        display: none;
+    }
+    
+    footer > .container >.footer-cen {
+        display: none;
+    }
+  
+    
+    footer > .container >.footer-bot {
+        padding: 0px 0px 50px 0;
+    }
+    
+    footer > .container >.footer-bot > a{
+        position: relative;
+        margin: 0 auto;
+        width: 74px;
+        height: 39px;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -99999px;
+        background-image: url(../img/bg_footer_tving_logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+    }
  }
 
  @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -690,6 +1061,10 @@
          margin-left: 20px;
      }
 
+     .contents>.main-text>.container>.text-right>.sns-wrap {
+         margin-top: 45px;
+     }
+
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns {
          width: 40px;
          height: 40px;
@@ -705,8 +1080,93 @@
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns>a>img {
          width: 29px;
          height: 29px;
-         transform: translate(18%, 18%);
      }
+
+     .content> .container> .con-left>.con-tit {
+        margin-left: 10px;
+        margin-bottom: 35px;
+     }
+     .content> .container> .con-left>.con-tit >h1{
+         font-size: 26px;
+     }
+     .content> .container> .con-left>.hash-tag > li {
+        border: 1px solid #c4c4c4;
+        border-radius: 50px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+        padding: 8px 13px;
+        display: inline-block;
+        color: #929292;
+        font-weight: bold;
+        font-size:14px ;
+     }
+    
+   
+    .projet >.container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .projet >.container>.pro-left {
+        width: 100%;
+        padding-bottom: 25%;
+        background-image: url(../img/character_02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 -410px;
+    }
+    .projet >.container>.pro-left >img{
+        display: none;
+    }
+
+    .projet >.container>.pro-center {
+        width: 100%;
+        padding-top: 20px;
+        margin-left: 0;
+        padding-left: 30px;
+    }
+
+    .projet >.container>.pro-center>.text-box {
+        border-right: none;
+    }
+
+    .projet >.container>.pro-center > h2{
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+    
+    .projet >.container>.pro-right {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    
+    footer > .container >.footer-top {
+        display: none;
+    }
+    
+    footer > .container >.footer-cen {
+        display: none;
+    }
+  
+    
+    footer > .container >.footer-bot {
+        padding: 0px 0px 50px 0;
+    }
+
+    footer > .container >.footer-bot > a{
+        position: relative;
+        margin: 0 auto;
+        width: 74px;
+        height: 39px;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -99999px;
+        background-image: url(../img/bg_footer_tving_logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+    }
  }
 
  @media only screen and (min-width: 1024px) and (max-width: 1299px) {
@@ -726,6 +1186,10 @@
          margin-left: 20px;
      }
 
+     .contents>.main-text>.container>.text-right>.sns-wrap {
+         margin-top: 45px;
+     }
+
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns {
          width: 42px;
          height: 42px;
@@ -734,13 +1198,24 @@
          margin-left: 10px;
      }
 
-     .contents>.main-text>.container>.text-right>.sns-wrap>.sns:last-child {
-         margin-right: 20px;
-     }
+     .contents>.main-text>.container>.text-right>.sns-wrap>.sns:last-child {}
 
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns>a>img {
          width: 31px;
          height: 31px;
-         transform: translate(18%, 18%);
      }
+
+    .content >.container> .con-right>.swiper {
+        
+    }
+    .content > .con-right>.swiper >.swiper-slide {}
+    .content > .con-right>.swiper >.swiper-slide > a {}
+    .content > .con-right>.swiper >.swiper-slide > p {}
+
+    .projet >.container>.pro-left {
+        width: 25%;
+        padding-left: 0;
+    }
+  
+    
  }

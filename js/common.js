@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 15,
         slidesPerGroup: 4,
         loop: true,
         loopFillGroupWithBlank: true,
@@ -17,9 +17,11 @@ $(document).ready(function () {
           clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
         },
       });
+
+      
 
 });
