@@ -43,8 +43,6 @@
      height: 165px;
  }
 
- header>.container {}
-
  /* ----------------------------  로고 ----------------------------  */
 
  header>.container>.logo-wrap {
@@ -61,17 +59,11 @@
      max-height: 60px;
  }
 
- header>.container>.logo-wrap>.logo1>a {}
-
- header>.container>.logo-wrap>.logo1>a>img {}
 
  header>.container>.logo-wrap>.logo2 {
      max-height: 79px;
  }
 
- header>.container>.logo-wrap>.logo2>a {}
-
- header>.container>.logo-wrap>.logo2>a>img {}
 
  /*  ---------------------------- 메뉴 ----------------------------  */
 
@@ -204,7 +196,6 @@
      width: 100%;
  }
 
- .contents>.actor>.container {}
 
  .contents>.actor>.container>.actor-tit {
      width: 100%;
@@ -214,86 +205,140 @@
      background-repeat: no-repeat;
  }
 
- /* ------------------------ 인물 탭 -------------------------- */
- .tab-wrap {
-     width: 100%;
+ /* ------------------------ 인물 -------------------------- */
+
+
+ .actor-wrap>.actor-img {
+     max-width: 1300px;
      margin: 0 auto;
-     padding-bottom: 50px;
-     position: relative;
-     border: 1px solid green;
-     background-image: url(../img/tabList_bg.png);
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: contain;
+     padding: 30px 0 80px 0;
  }
 
- .tab-wrap>.tab-tit {
-     position: relative;
-     color: #662D1A;
-     font-size: 20px;
-     text-align: center;
-     font-weight: bold;
-     border: 1px solid red;
+ .actor-wrap>.actor-img>a {
+     padding-left: .8%;
  }
 
- .tab-wrap>.tabBtn-box {
-     position: relative;
-     margin: 0 auto;
-     width: 40%;
-     display: flex;
+ .actor-wrap>.actor-img>a:first-child {
+     padding-left: 0;
  }
 
- .tab-wrap>.tabBtn-box>.tab-btn {
-     width: 20%;
-     padding-top: 27px;
+ .actor-wrap>.actor-img>a>img {
+     width: 19%;
  }
 
- .tab-wrap>.tabBtn-box>.tab-btn:last-child {
-     border-right: none;
+ .actor-wrap>.actor-img>a:hover>img {
+     transform: scale(1.05);
  }
 
- .tab-wrap>.tabBtn-box>.on>a {
-     color: #662D1A;
- }
-
- .tab-wrap>.tabBtn-box>.tab-btn>a {
-     border-right: 2px solid #c4c4c4;
-     color: #666666;
+ .layer-bg {
      width: 100%;
-     display: block;
-     text-align: center;
-     font-size: 20px;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.7);
+     position: fixed;
+     z-index: 200;
+     display: none;
+ }
+
+ .layer {
+     position: relative;
+     background-color: #fff;
+     color: black;
+     width: 700px;
+     height: 530px;
+     top: 50%;
+     left: 50%;
+     margin-left: -350px;
+     margin-top: -280px;
+     position: fixed;
+     z-index: 300;
+     display: none;
+     border-radius: 3px;
+ }
+
+ .layer>.layer-top {
+     padding: 20px 40px 0px 40px;
+ }
+
+ .layer>.layer-top>p {
+     display: inline-block;
+     font-size: 35px;
      font-weight: bold;
-     letter-spacing: -1px;
  }
 
- .tab-wrap>.tabBtn-box>.tab-btn:last-child>a {
-     border-right: none;
+ .layer>.layer-top>span {
+     font-size: 23px;
+     font-weight: bold;
  }
 
- .tab-wrap>.tabCon-box {}
-
- .tab-wrap>.tabCon-box>.tab-con01 {}
-
- .tab-wrap>.tabCon-box>.tab-con02 {
-     display: none;
+ .layer>.close-btn {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     cursor: pointer;
  }
 
- .tab-wrap>.tabCon-box>.tab-con03 {
-     display: none;
+ .layer>.text-box {
+     overflow: auto;
+     height: 350px;
  }
 
- .tab-wrap>.tabCon-box>.tab-con04 {
-     display: none;
+ .layer>.text-box>.scroll {
+     position: relative;
+     z-index: 250;
+     padding: 5px 50px;
+     line-height: 1.4;
+     z-index: 300;
+     font-weight: 500;
  }
 
- .tab-wrap>.tabCon-box>.tab-con05 {
-     display: none;
+ .layer>img {
+     position: absolute;
+     bottom: 0;
+     right: 15px;
+     width: 450px;
+     opacity: 85%;
+ }
+
+ .layer>.close-btn {
+     width: 30px;
+     height: 30px;
+     background-color: rgba(0, 0, 0, 0.2);
+     border-radius: 5px;
+     padding: 5px;
+ }
+
+ .layer>.close-btn>img {
+     width: 20px;
+     height: 20px;
+ }
+
+
+ .layer02>img {
+     width: 300px;
+     bottom: 10px;
+ }
+
+ .layer03>img {
+     width: 300px;
+     bottom: 10px;
+ }
+
+ .layer04>img {
+     width: 250px;
+     bottom: 10px;
+ }
+
+ .layer05>img {
+     width: 350px;
+     bottom: 10px;
  }
 
  /* ---------------------------- 비디오 --------------------------  */
  .contents>.video {
      width: 100%;
+     padding-top: 30px;
  }
 
  .contents>.video>.container {
@@ -314,6 +359,7 @@
 
  .contents>.video>.container>.video-left>.video-wrap {
      padding-top: 10px;
+     position: relative;
  }
 
  .contents>.video>.container>.video-left>.video-wrap>.v-tit {
@@ -333,8 +379,6 @@
      width: 100%;
      border-radius: 3px;
  }
-
- .contents>.video>.container>.video-left>.video-wrap>.video-box>video>source {}
 
 
  .contents>.video>.container>.video-right {
@@ -406,7 +450,6 @@
      font-size: 30px;
  }
 
- .content>.container>.con-left>.hash-tag {}
 
  .content>.container>.con-left>.hash-tag li {
      border: 1px solid #c4c4c4;
@@ -486,109 +529,119 @@
  }
 
  /* ---------------------- 기획의도 ---------------------- */
-.projet {
-    width: 100%;
-    margin-top: 50px;
-}
-.projet >.container{
-    border: 1px solid #C4C4C4;
-    border-radius:10px;
-    display: flex;
-    flex-direction: row;
-}
-.projet >.container>.pro-left {
-    width: 25%;
-    margin: auto;
-    padding: 40px;
-}
+ .projet {
+     width: 100%;
+     margin-top: 50px;
+ }
 
-.projet >.container>.pro-center {
-    width: 37.5%;
-    padding-top: 25px;
-    margin-left: 30px;
-}
-.projet >.container>.pro-center > h2{
-    font-size: 24px;
-    padding-bottom: 10px;
-}
+ .projet>.container {
+     border: 1px solid #C4C4C4;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: row;
+ }
 
-.projet >.container>.pro-center>.text-box {
-    border-right: 3px solid rgba(66, 66, 66, 0.2);
-}
-.projet >.container h4 {
-    font-size: 14px;
-    font-weight: bold;
-}
-.projet >.container li {
-    font-size: 14px; 
-}
-.projet >.container>.pro-right {
-    width: 37.5%;
-    padding-top: 110px;
-    padding-left: 30px;
-}
+ .projet>.container>.pro-left {
+     width: 25%;
+     margin: auto;
+     padding: 40px;
+ }
 
-/* ------------------------ 푸터 ------------------------ */
+ .projet>.container>.pro-center {
+     width: 37.5%;
+     padding-top: 25px;
+     margin-left: 30px;
+ }
 
-footer {
-    background-color: #FAFAFA;
-    margin-top: 50px;
-}
+ .projet>.container>.pro-center>h2 {
+     font-size: 24px;
+     padding-bottom: 10px;
+ }
 
-footer > .container {
-    display: flex;
-    flex-direction: column;
-}
+ .projet>.container>.pro-center>.text-box {
+     border-right: 3px solid rgba(66, 66, 66, 0.2);
+ }
 
-footer > .container >.footer-top {
-    padding: 26px 0 0 0;
-}
-footer > .container >.footer-top>ul {
-    text-align: center;
-}
-footer > .container >.footer-top>ul li {
-    padding: 0 7px;
-    display: inline;
-    line-height: 20px;
-}
+ .projet>.container h4 {
+     font-size: 14px;
+     font-weight: bold;
+ }
 
-footer > .container >.footer-top>ul li a{
-    font-size: 14px;
-    color: #707070;
-}
+ .projet>.container li {
+     font-size: 14px;
+ }
 
-footer > .container >.footer-top>ul li:nth-child(4) > a {
-    font-weight: bold;
-    color: #000
-}
+ .projet>.container>.pro-right {
+     width: 37.5%;
+     padding-top: 110px;
+     padding-left: 30px;
+ }
 
-footer > .container >.footer-cen {
-    padding: 21px 0 0 0;
-    text-align: center;
-}
-footer > .container >.footer-cen> span {
-    margin: 0 5px;
-    font-size: 12px;
-    color: #808080;
-    line-height: 22px;
-}
+ /* ------------------------ 푸터 ------------------------ */
 
-footer > .container >.footer-bot {
-    padding: 16px 0 20px 0;
-}
-footer > .container >.footer-bot > a{
-    position: relative;
-    margin: 0 auto;
-    width: 74px;
-    height: 39px;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -99999px;
-    background-image: url(../img/bg_footer_tving_logo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-}
+ footer {
+     background-color: #FAFAFA;
+     margin-top: 50px;
+ }
+
+ footer>.container {
+     display: flex;
+     flex-direction: column;
+ }
+
+ footer>.container>.footer-top {
+     padding: 26px 0 0 0;
+ }
+
+ footer>.container>.footer-top>ul {
+     text-align: center;
+ }
+
+ footer>.container>.footer-top>ul li {
+     padding: 0 7px;
+     display: inline;
+     line-height: 20px;
+ }
+
+ footer>.container>.footer-top>ul li a {
+     font-size: 14px;
+     color: #707070;
+ }
+
+ footer>.container>.footer-top>ul li:nth-child(4)>a {
+     font-weight: bold;
+     color: #000
+ }
+
+ footer>.container>.footer-cen {
+     padding: 21px 0 0 0;
+     text-align: center;
+ }
+
+ footer>.container>.footer-cen>span {
+     margin: 0 5px;
+     font-size: 12px;
+     color: #808080;
+     line-height: 22px;
+ }
+
+ footer>.container>.footer-bot {
+     padding: 16px 0 20px 0;
+ }
+
+ footer>.container>.footer-bot>a {
+     position: relative;
+     margin: 0 auto;
+     width: 74px;
+     height: 39px;
+     font-size: 0;
+     line-height: 0;
+     text-indent: -99999px;
+     background-image: url(../img/bg_footer_tving_logo.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     display: block;
+ }
 
 
 
@@ -662,21 +715,96 @@ footer > .container >.footer-bot > a{
          background-size: 212.5px 15px;
      }
 
-     .tab-wrap {
-         width: 100%;
-         padding-bottom: 110px;
+     .actor-wrap>.actor-img {
+         max-width: 1300px;
          margin: 0 auto;
-         background-image: none;
+         padding: 20px 0px 20px 10px;
      }
 
-     .tab-wrap>.tab-tit {
+     .actor-wrap>.actor-img>a>img {
+         width: 18%;
+     }
+
+     .layer-bg {
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.7);
+         position: fixed;
+         z-index: 200;
          display: none;
      }
 
-     .tab-wrap>.tabBtn-box>.tab-btn>a {
+     .layer {
+         position: relative;
+         background-color: #fff;
+         color: black;
+         width: 300px;
+         height: 530px;
+         top: 50%;
+         left: 50%;
+         margin-left: -150px;
+         margin-top: -280px;
+         position: fixed;
+         z-index: 300;
+         display: none;
+         border-radius: 3px;
+     }
+
+     .layer>.layer-top {
+         padding: 10px 20px 20px 20px;
+     }
+
+     .layer>.layer-top>p {
+         display: block;
+         font-size: 24px;
+         font-weight: bold;
+         line-height: 0.5;
+     }
+
+     .layer>.layer-top>span {
+         font-size: 15px;
+     }
+
+     .layer>.close-btn {
+         top: 10px;
+         right: 10px;
+     }
+
+     .layer>.text-box {
+         overflow: auto;
+         height: 350px;
+     }
+
+     .layer>.text-box>.scroll {
+         position: relative;
+         z-index: 250;
+         padding: 5px 30px;
+         line-height: 1.4;
+         z-index: 300;
+         font-weight: 500;
+         font-size: 12px;
+     }
+
+     .layer>img {
          display: none;
      }
 
+     .layer>.close-btn {
+         background-color: rgba(0, 0, 0, 0);
+     }
+
+     .layer>.close-btn>img {
+         width: 10px;
+         height: 10px;
+     }
+
+
+
+     .contents>.video {
+         padding-top: 10px;
+     }
 
      .contents>.video>.container {
          display: flex;
@@ -691,7 +819,7 @@ footer > .container >.footer-bot > a{
          width: 100%;
      }
 
-     .contents>.video>.container>.video-left>.video-wrap>.v-tit{
+     .contents>.video>.container>.video-left>.video-wrap>.v-tit {
          font-size: 15px;
      }
 
@@ -710,129 +838,134 @@ footer > .container >.footer-bot > a{
      .content {
          margin-top: 0px;
      }
-     .content> .container {
+
+     .content>.container {
          display: flex;
          flex-direction: column;
      }
 
-     .content> .container> .con-left {
+     .content>.container>.con-left {
          width: 100%;
      }
 
-     .content> .container> .con-left>.con-tit {
-        margin-bottom: 30px;
-     }
-     .content> .container> .con-left>.con-tit >h1{
-         font-size: 18px;
-     }
-     .content> .container> .con-left>.hash-tag > li {
-       display: none;
+     .content>.container>.con-left>.con-tit {
+         margin-bottom: 30px;
      }
 
-     .content> .container> .con-right {
+     .content>.container>.con-left>.con-tit>h1 {
+         font-size: 18px;
+     }
+
+     .content>.container>.con-left>.hash-tag>li {
+         display: none;
+     }
+
+     .content>.container>.con-right {
          width: 100%;
      }
 
 
      .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>.img-box {
-        padding-bottom: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-   
-   
-    .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>a {
-        padding-top: 10px;
-        font-size: 12px;
-        height: 30px;
-    }
-   
-    .content>.container>.con-right>.swiper>.swiper-wrapper p {
-        font-weight: bold;
-        color: #b75c46;
-        font-size: 12px;
-    }
+         padding-bottom: 100%;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+     }
 
-    .content .button-next,
-    .content .button-prev {
-        width: 20px;
-        height: 20px;
-    }
 
-    .projet >.container{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .projet >.container>.pro-left {
-        width: 100%;
-        padding-bottom: 25%;
-        background-image: url(../img/character_02.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0 -220px;
-    }
-    .projet >.container>.pro-left >img{
-        display: none;
-    }
+     .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>a {
+         padding-top: 10px;
+         font-size: 12px;
+         height: 30px;
+     }
 
-    .projet >.container>.pro-center {
-        width: 100%;
-        padding-top: 20px;
-        margin-left: 0;
-        padding-left: 30px;
-    }
+     .content>.container>.con-right>.swiper>.swiper-wrapper p {
+         font-weight: bold;
+         color: #b75c46;
+         font-size: 12px;
+     }
 
-    .projet >.container>.pro-center>.text-box {
-        border-right: none;
-    }
+     .content .button-next,
+     .content .button-prev {
+         width: 20px;
+         height: 20px;
+     }
 
-    .projet >.container>.pro-center > h2{
-        font-size: 24px;
-        padding-bottom: 10px;
-    }
-    
-    .projet >.container>.pro-right {
-        width: 100%;
-        padding-top: 20px;
-    }
+     .projet>.container {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+     }
 
-    .projet> .container>.pro-center> h2 {
-        font-size: 16px;
-    }
+     .projet>.container>.pro-left {
+         width: 100%;
+         padding-bottom: 25%;
+         background-image: url(../img/character_02.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 0 -220px;
+     }
 
-    .projet> .container h4,
-    .projet> .container li {
-        font-size: 12px;
-    }
+     .projet>.container>.pro-left>img {
+         display: none;
+     }
 
-    footer > .container >.footer-top {
-        display: none;
-    }
-    
-    footer > .container >.footer-cen {
-        display: none;
-    }
-  
-    
-    footer > .container >.footer-bot {
-        padding: 0px 0px 50px 0;
-    }
-    
-    footer > .container >.footer-bot > a{
-        position: relative;
-        margin: 0 auto;
-        width: 74px;
-        height: 39px;
-        font-size: 0;
-        line-height: 0;
-        text-indent: -99999px;
-        background-image: url(../img/bg_footer_tving_logo.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;
-    }
+     .projet>.container>.pro-center {
+         width: 100%;
+         padding-top: 20px;
+         margin-left: 0;
+         padding-left: 30px;
+     }
+
+     .projet>.container>.pro-center>.text-box {
+         border-right: none;
+     }
+
+     .projet>.container>.pro-center>h2 {
+         font-size: 24px;
+         padding-bottom: 10px;
+     }
+
+     .projet>.container>.pro-right {
+         width: 100%;
+         padding-top: 20px;
+     }
+
+     .projet>.container>.pro-center>h2 {
+         font-size: 16px;
+     }
+
+     .projet>.container h4,
+     .projet>.container li {
+         font-size: 12px;
+     }
+
+     footer>.container>.footer-top {
+         display: none;
+     }
+
+     footer>.container>.footer-cen {
+         display: none;
+     }
+
+
+     footer>.container>.footer-bot {
+         padding: 0px 0px 50px 0;
+     }
+
+     footer>.container>.footer-bot>a {
+         position: relative;
+         margin: 0 auto;
+         width: 74px;
+         height: 39px;
+         font-size: 0;
+         line-height: 0;
+         text-indent: -99999px;
+         background-image: url(../img/bg_footer_tving_logo.png);
+         background-repeat: no-repeat;
+         background-position: center;
+         display: block;
+     }
 
  }
 
@@ -887,32 +1020,93 @@ footer > .container >.footer-bot > a{
          background-size: 350px 24.7px;
      }
 
-     .tab-wrap {
+     .actor-wrap>.actor-img {
+         max-width: 1300px;
+         margin: 0 auto;
+         padding: 20px 0px 20px 20px;
+     }
+
+     .actor-wrap>.actor-img>a>img {
+         width: 18%;
+     }
+
+     .layer-bg {
          width: 100%;
-         padding-bottom: 110px;
-         margin: 0 auto;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.7);
+         position: fixed;
+         z-index: 200;
+         display: none;
      }
 
+     .layer {
+         position: relative;
+         background-color: #fff;
+         color: black;
+         width: 400px;
+         height: 500px;
+         top: 50%;
+         left: 50%;
+         margin-left: -200px;
+         margin-top: -250px;
+         position: fixed;
+         z-index: 300;
+         display: none;
+         border-radius: 3px;
+     }
 
-     .tab-wrap>.tab-tit {
-         color: #662D1A;
-         font-size: 16px;
-         text-align: center;
+     .layer>.layer-top {
+         padding: 10px 20px 20px 20px;
+     }
+
+     .layer>.layer-top>p {
+         display: block;
+         font-size: 24px;
          font-weight: bold;
-         padding: 10px;
+         line-height: 0.5;
      }
 
-     .tab-wrap>.tabBtn-box {
-         margin: 0 auto;
-         width: 50%;
-         display: flex;
+     .layer>.layer-top>span {
+         font-size: 15px;
      }
 
-     .tab-wrap>.tabBtn-box>.tab-btn>a {
-         font-size: 15px !important;
-         font-weight: bold;
-         letter-spacing: -1px;
+     .layer>.close-btn {
+         top: 10px;
+         right: 10px;
+     }
 
+     .layer>.text-box {
+         overflow: auto;
+         height: 350px;
+     }
+
+     .layer>.text-box>.scroll {
+         position: relative;
+         z-index: 250;
+         padding: 5px 30px;
+         line-height: 1.4;
+         z-index: 300;
+         font-weight: 500;
+         font-size: 12px;
+     }
+
+     .layer>img {
+         display: none;
+     }
+
+     .layer>.close-btn {
+         background-color: rgba(0, 0, 0, 0);
+     }
+
+     .layer>.close-btn>img {
+         width: 15px;
+         height: 15px;
+     }
+
+     .contents>.video {
+         padding-top: 10px;
      }
 
      .contents>.video>.container>.video-left>.video-wrap>.v-tit {
@@ -932,112 +1126,116 @@ footer > .container >.footer-bot > a{
          font-size: 25px;
      }
 
-     .content> .container> .con-left>.con-tit {
-        margin-left: 10px;
-        margin-bottom: 30px;
-     }
-     .content> .container> .con-left>.con-tit >h1{
-         font-size: 20px;
-     }
-     .content> .container> .con-left>.hash-tag > li {
-        border: 1px solid #c4c4c4;
-        border-radius: 50px;
-        margin-left: 15px;
-        margin-bottom: 5px;
-        padding: 8px 13px;
-        display: inline-block;
-        color: #929292;
-        font-weight: bold;
-        font-size:13px ;
+     .content>.container>.con-left>.con-tit {
+         margin-left: 10px;
+         margin-bottom: 30px;
      }
 
-     .content> .container> .con-right>.swiper>.swiper-wrapper>.swiper-slide>a{
+     .content>.container>.con-left>.con-tit>h1 {
+         font-size: 20px;
+     }
+
+     .content>.container>.con-left>.hash-tag>li {
+         border: 1px solid #c4c4c4;
+         border-radius: 50px;
+         margin-left: 15px;
+         margin-bottom: 5px;
+         padding: 8px 13px;
+         display: inline-block;
+         color: #929292;
+         font-weight: bold;
          font-size: 13px;
      }
 
-     .content> .container> .con-right>.swiper>.swiper-wrapper>.swiper-slide>p {
+     .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>a {
+         font-size: 13px;
+     }
+
+     .content>.container>.con-right>.swiper>.swiper-wrapper>.swiper-slide>p {
          font-size: 13px;
      }
 
      .content .button-next,
-    .content .button-prev {
-        width: 25px;
-        height: 25px;
-    }
+     .content .button-prev {
+         width: 25px;
+         height: 25px;
+     }
 
-    .projet >.container{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .projet >.container>.pro-left {
-        width: 100%;
-        padding-bottom: 25%;
-        background-image: url(../img/character_02.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0 -310px;
-    }
-    .projet >.container>.pro-left >img{
-        display: none;
-    }
+     .projet>.container {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+     }
 
-    .projet >.container>.pro-center {
-        width: 100%;
-        padding-top: 20px;
-        margin-left: 0;
-        padding-left: 30px;
-    }
+     .projet>.container>.pro-left {
+         width: 100%;
+         padding-bottom: 25%;
+         background-image: url(../img/character_02.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 0 -310px;
+     }
 
-    .projet >.container>.pro-center>.text-box {
-        border-right: none;
-    }
+     .projet>.container>.pro-left>img {
+         display: none;
+     }
 
-    .projet >.container>.pro-center > h2{
-        font-size: 24px;
-        padding-bottom: 10px;
-    }
-    
-    .projet >.container>.pro-right {
-        width: 100%;
-        padding-top: 20px;
-    }
+     .projet>.container>.pro-center {
+         width: 100%;
+         padding-top: 20px;
+         margin-left: 0;
+         padding-left: 30px;
+     }
 
-    .projet> .container>.pro-center> h2 {
-        font-size: 16px;
-    }
+     .projet>.container>.pro-center>.text-box {
+         border-right: none;
+     }
 
-    .projet> .container h4,
-    .projet> .container li {
-        font-size: 12px;
-    }
+     .projet>.container>.pro-center>h2 {
+         font-size: 24px;
+         padding-bottom: 10px;
+     }
 
-    footer > .container >.footer-top {
-        display: none;
-    }
-    
-    footer > .container >.footer-cen {
-        display: none;
-    }
-  
-    
-    footer > .container >.footer-bot {
-        padding: 0px 0px 50px 0;
-    }
-    
-    footer > .container >.footer-bot > a{
-        position: relative;
-        margin: 0 auto;
-        width: 74px;
-        height: 39px;
-        font-size: 0;
-        line-height: 0;
-        text-indent: -99999px;
-        background-image: url(../img/bg_footer_tving_logo.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;
-    }
+     .projet>.container>.pro-right {
+         width: 100%;
+         padding-top: 20px;
+     }
+
+     .projet>.container>.pro-center>h2 {
+         font-size: 16px;
+     }
+
+     .projet>.container h4,
+     .projet>.container li {
+         font-size: 12px;
+     }
+
+     footer>.container>.footer-top {
+         display: none;
+     }
+
+     footer>.container>.footer-cen {
+         display: none;
+     }
+
+
+     footer>.container>.footer-bot {
+         padding: 0px 0px 50px 0;
+     }
+
+     footer>.container>.footer-bot>a {
+         position: relative;
+         margin: 0 auto;
+         width: 74px;
+         height: 39px;
+         font-size: 0;
+         line-height: 0;
+         text-indent: -99999px;
+         background-image: url(../img/bg_footer_tving_logo.png);
+         background-repeat: no-repeat;
+         background-position: center;
+         display: block;
+     }
  }
 
  @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1082,91 +1280,200 @@ footer > .container >.footer-bot > a{
          height: 29px;
      }
 
-     .content> .container> .con-left>.con-tit {
-        margin-left: 10px;
-        margin-bottom: 35px;
+     .actor-wrap>.actor-img {
+         max-width: 1300px;
+         margin: 0 auto;
+         padding: 20px 0px 40px 25px;
      }
-     .content> .container> .con-left>.con-tit >h1{
+
+     .actor-wrap>.actor-img>a>img {
+         width: 18%;
+     }
+
+     .layer-bg {
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.7);
+         position: fixed;
+         z-index: 200;
+         display: none;
+     }
+
+     .layer {
+         position: relative;
+         background-color: #fff;
+         color: black;
+         width: 500px;
+         height: 500px;
+         top: 50%;
+         left: 50%;
+         margin-left: -250px;
+         margin-top: -250px;
+         position: fixed;
+         z-index: 300;
+         display: none;
+         border-radius: 3px;
+     }
+
+     .layer>.layer-top {
+         padding: 20px;
+     }
+
+     .layer>.layer-top>p {
+         font-size: 28px;
+         font-weight: bold;
+         line-height: 0.5;
+     }
+
+     .layer>.layer-top>span {
+         font-size: 16px;
+     }
+
+     .layer>.close-btn {
+         top: 10px;
+         right: 10px;
+     }
+
+     .layer>.text-box {
+         overflow: auto;
+         height: 350px;
+     }
+
+     .layer>.text-box>.scroll {
+         position: relative;
+         z-index: 250;
+         padding: 5px 30px;
+         line-height: 1.4;
+         z-index: 300;
+         font-weight: 500;
+         font-size: 15px;
+     }
+
+
+     .layer>.close-btn {
+         background-color: rgba(0, 0, 0, 0);
+     }
+
+     .layer>.close-btn>img {
+         width: 15px;
+         height: 15px;
+     }
+
+     .layer01>img {
+         width: 350px;
+     }
+
+     .layer02>img {
+         width: 250px;
+     }
+
+     .layer03>img {
+         width: 200px;
+     }
+
+     .layer04>img {
+         width: 180px;
+     }
+
+     .layer05>img {
+         width: 250px;
+     }
+
+     .contents>.video {
+         padding-top: 30px;
+     }
+
+     .content>.container>.con-left>.con-tit {
+         margin-left: 10px;
+         margin-bottom: 35px;
+     }
+
+     .content>.container>.con-left>.con-tit>h1 {
          font-size: 26px;
      }
-     .content> .container> .con-left>.hash-tag > li {
-        border: 1px solid #c4c4c4;
-        border-radius: 50px;
-        margin-left: 25px;
-        margin-bottom: 5px;
-        padding: 8px 13px;
-        display: inline-block;
-        color: #929292;
-        font-weight: bold;
-        font-size:14px ;
+
+     .content>.container>.con-left>.hash-tag>li {
+         border: 1px solid #c4c4c4;
+         border-radius: 50px;
+         margin-left: 25px;
+         margin-bottom: 5px;
+         padding: 8px 13px;
+         display: inline-block;
+         color: #929292;
+         font-weight: bold;
+         font-size: 14px;
      }
-    
-   
-    .projet >.container{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .projet >.container>.pro-left {
-        width: 100%;
-        padding-bottom: 25%;
-        background-image: url(../img/character_02.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0 -410px;
-    }
-    .projet >.container>.pro-left >img{
-        display: none;
-    }
 
-    .projet >.container>.pro-center {
-        width: 100%;
-        padding-top: 20px;
-        margin-left: 0;
-        padding-left: 30px;
-    }
 
-    .projet >.container>.pro-center>.text-box {
-        border-right: none;
-    }
+     .projet>.container {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+     }
 
-    .projet >.container>.pro-center > h2{
-        font-size: 24px;
-        padding-bottom: 10px;
-    }
-    
-    .projet >.container>.pro-right {
-        width: 100%;
-        padding-top: 20px;
-    }
+     .projet>.container>.pro-left {
+         width: 100%;
+         padding-bottom: 25%;
+         background-image: url(../img/character_02.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 0 -410px;
+     }
 
-    
-    footer > .container >.footer-top {
-        display: none;
-    }
-    
-    footer > .container >.footer-cen {
-        display: none;
-    }
-  
-    
-    footer > .container >.footer-bot {
-        padding: 0px 0px 50px 0;
-    }
+     .projet>.container>.pro-left>img {
+         display: none;
+     }
 
-    footer > .container >.footer-bot > a{
-        position: relative;
-        margin: 0 auto;
-        width: 74px;
-        height: 39px;
-        font-size: 0;
-        line-height: 0;
-        text-indent: -99999px;
-        background-image: url(../img/bg_footer_tving_logo.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;
-    }
+     .projet>.container>.pro-center {
+         width: 100%;
+         padding-top: 20px;
+         margin-left: 0;
+         padding-left: 30px;
+     }
+
+     .projet>.container>.pro-center>.text-box {
+         border-right: none;
+     }
+
+     .projet>.container>.pro-center>h2 {
+         font-size: 24px;
+         padding-bottom: 10px;
+     }
+
+     .projet>.container>.pro-right {
+         width: 100%;
+         padding-top: 20px;
+     }
+
+
+     footer>.container>.footer-top {
+         display: none;
+     }
+
+     footer>.container>.footer-cen {
+         display: none;
+     }
+
+
+     footer>.container>.footer-bot {
+         padding: 0px 0px 50px 0;
+     }
+
+     footer>.container>.footer-bot>a {
+         position: relative;
+         margin: 0 auto;
+         width: 74px;
+         height: 39px;
+         font-size: 0;
+         line-height: 0;
+         text-indent: -99999px;
+         background-image: url(../img/bg_footer_tving_logo.png);
+         background-repeat: no-repeat;
+         background-position: center;
+         display: block;
+     }
  }
 
  @media only screen and (min-width: 1024px) and (max-width: 1299px) {
@@ -1198,24 +1505,31 @@ footer > .container >.footer-bot > a{
          margin-left: 10px;
      }
 
-     .contents>.main-text>.container>.text-right>.sns-wrap>.sns:last-child {}
 
      .contents>.main-text>.container>.text-right>.sns-wrap>.sns>a>img {
          width: 31px;
          height: 31px;
      }
 
-    .content >.container> .con-right>.swiper {
-        
-    }
-    .content > .con-right>.swiper >.swiper-slide {}
-    .content > .con-right>.swiper >.swiper-slide > a {}
-    .content > .con-right>.swiper >.swiper-slide > p {}
+     .actor-wrap>.actor-img {
+         max-width: 1300px;
+         margin: 0 auto;
+         padding: 20px 0px 60px 40px;
+     }
 
-    .projet >.container>.pro-left {
-        width: 25%;
-        padding-left: 0;
-    }
-  
-    
+     .actor-wrap>.actor-img>a>img {
+         width: 18%;
+     }
+
+     .contents>.video {
+         padding-top: 30px;
+     }
+
+
+     .projet>.container>.pro-left {
+         width: 25%;
+         padding-left: 0;
+     }
+
+
  }
