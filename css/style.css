@@ -395,6 +395,7 @@
      display: inline-block;
      margin-left: 3%;
      padding-bottom: 20px;
+     cursor: pointer;
  }
 
  .contents>.video>.container>.video-right>.box-wrap>.video-wrap>.video-box {
